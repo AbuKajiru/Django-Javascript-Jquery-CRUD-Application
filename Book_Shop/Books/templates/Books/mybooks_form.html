@@ -1,0 +1,25 @@
+{% extends 'Books/base.html' %}
+{% block myTitle %} Add/Update Book - Sinji's Bookstore{% endblock %}
+
+{% block myCode %}
+    <div class="form-container">
+      <div class="form-holder">
+        <div class="modal-header">
+          <h2>Add/Update Book Details</h2>
+        </div>
+        <form action="" method="post" enctype="multipart/form-data">
+            <!-- Security -->
+            {% csrf_token %}
+
+            <!-- Simple Template That Describes Form -->
+            {% include 'Books/form-template.html' %}
+
+            <button type="submit" class="sub"> Submit Data </button>
+
+            <button onclick="window.history.back();" class="sub-c" type="button">Cancel</button>
+
+        </form>
+
+      </div>
+    </div>
+{% endblock %}

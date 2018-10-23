@@ -1,0 +1,53 @@
+{% extends 'Books/base.html' %}
+{% block myTitle %} Home Page - Sinji's Bookstore{% endblock %}
+
+{% block myCode %}
+  <div class="prompt-container">
+    <div class="prompt">
+      <p> Welcome, what would you like to do? </p>
+    </div>
+  </div>
+
+  <div class="choice-container">
+    <div class="choice">
+      <div class="choice-left">
+        <p>View Books Currently In Store</p>
+      </div>
+      <div class="choice-right">
+        <button type="button" name="button" class="view"> Select </button>
+      </div>
+    </div>
+  </div>
+  <div class="choice-container">
+    <div class="choice">
+      <div class="choice-left">
+        <p>Add Books To The Store</p>
+      </div>
+      <div class="choice-right">
+        <button type="button" name="button" class="add"> Select </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Prerequisites</h2>
+      </div>
+      <div class="modal-body">
+        <div class="view-con">
+          <p>View The Full List Of Books Within The Store. The Books Will Be Only Listed As A Preview But Resources Are Available For A Detailed Description View.</p>
+          <a href="{% url 'all_books_view'%}"><button type="button" class="vie-book">View Books</button></a>
+        </div>
+        <div class="view-add">
+          <p>Each Book Is Defined By A Set Of Properties, e.g. Title, Author e.t.c. To Add A Book To The Store Please Make Sure To Provide Accurate Information As Required.</p>
+          <a href=" {% url 'add_book' %}"> <button type="button" class="vie-book">Add A New Book</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

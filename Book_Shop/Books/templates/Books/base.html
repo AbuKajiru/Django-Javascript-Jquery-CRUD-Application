@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block myTitle %} Sinji's Bookstore {% endblock %}</title>
+
+    {% load staticfiles %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'Books/js/home.js' %}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{% static 'Books/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'Books/css/home.css'%}">
+    <link rel="stylesheet" href="{% static 'Books/css/books_in_store.css'%}">
+    <link rel="stylesheet" href="{% static 'Books/css/book_description.css'%}">
+    <link rel="stylesheet" href="{% static 'Books/css/forms.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Krub|PT+Sans" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $(".view").click(function(){
+            $("#myModal").css("display", "block");
+            $(".view-con").css("display", "block");
+          })
+
+          $(".add").click(function(){
+            $("#myModal").css("display", "block");
+            $(".view-add").css("display", "block");
+          })
+
+          $(".vie-book").click(function(){
+            $("#myModal").css("display", "none");
+            $(".view-add").css("display", "none");
+            $(".view-con").css("display", "none");
+          })
+
+          $(".close").click(function(){
+            $("#myModal").css("display", "none");
+            $(".view-add").css("display", "none");
+            $(".view-con").css("display", "none");
+          })
+
+        });
+    </script>
+</head>
+<body>
+  <header><h2>Sinji's Book Store</h2></header>
+  {% block myCode %}
+  {% endblock %}
+</body>
+</html>

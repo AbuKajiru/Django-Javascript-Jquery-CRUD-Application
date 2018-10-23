@@ -1,0 +1,69 @@
+{% extends 'Books/base.html' %}
+{% block myTitle %} Inventory - Sinji's Bookstore{% endblock %}
+
+{% block myCode %}
+    {% if all_books %}
+        <div class="back-container">
+          <a href="{% url 'index'%}"><button type="button" name="button">Back</button></a>
+          <div class="content-details">
+            <p> <li> Books Currently In The Store's Inventory </li></p>
+          </div>
+        </div>
+        {% for book in all_books %}
+        <div class="book-holder">
+            <div class="book-overview">
+              <div class="left">
+                  <a href=" {% url 'detail' book.id %}">
+                      <img src="{{ book.Book_Art.url }}">
+                  </a>
+              </div>
+              <div class="center">
+                <div class="center-1a">
+                  <p>Reference Number:</p>
+                </div>
+                <div class="center-2a">
+                  <br> <p>Title:</p>
+                </div>
+                <div class="center-3a">
+                  <br> <p>Category:</p>
+                </div>
+                <div class="center-4a">
+                  <p>Number Of Copies:</p>
+                </div>
+              </div>
+
+              <div class="center-right">
+                <div class="center-1b">
+                  <br>
+                  <p><span class="content">{{ book.id }}</span> </p>
+                </div>
+                <div class="center-2b">
+                  <br><span class="content">{{ book.Title }}</span></p>
+                </div>
+                <div class="center-3b">
+                  <br><span class="content">{{ book.Type }}</span></p>
+                </div>
+                <div class="center-4b">
+                  <br><span class="content">{{ book.No_Of_Copies }}</span></p>
+                </div>
+              </div>
+              <div class="right">
+                <a href="{% url 'detail' book.id %}"><button type="button" class="describe" id="des" onclick="done()">Detailed View </button></a>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    {% else %}
+       <div class="no-data">
+         <div class="modal-header">
+           <p>Action Prompt</p>
+         </div>
+         <p class="aler">I'm sorry there are currently no books
+         listed in the inventory. Please click
+         the button on below to add a book.</p>
+         <a href=" {% url 'add_book' %}"> <button type="button" class="update">Add A New Book</button></a>
+       </div>
+    {% endif %}
+
+{% endblock %}

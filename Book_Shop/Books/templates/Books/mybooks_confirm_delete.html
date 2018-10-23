@@ -1,0 +1,20 @@
+{% extends 'Books/base.html' %}
+{% block myTitle %} Delete Book - Sinji's Bookstore{% endblock %}
+
+{% block myCode %}
+    <div class="form-container">
+      <div class="del-form-holder">
+        <div class="modal-header">
+          <p>Action Prompt</p>
+        </div>
+        <form action="" method="post">
+          <!-- Security -->
+              {% csrf_token %}
+          <p class="aler">Are you sure you want to delete "{{mybooks.Title}}"?</p>
+          <input class="update" type="submit" value="Confirm"/>
+          <button onclick="window.history.back();" class="delete" type="button">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+{% endblock %}

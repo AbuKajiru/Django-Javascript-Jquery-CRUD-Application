@@ -1,0 +1,56 @@
+{% extends 'Books/base.html' %}
+{% block myTitle %} Inventory - Sinji's Bookstore{% endblock %}
+
+{% block myCode %}
+    <div class="back-container">
+      <a href="{% url 'all_books_view'%}"><button onclick="funcsome()" type="button" name="button" id="someBuon">Back</button></a>
+      <div class="content-details">
+        <p> <li> Detailed Description Of {{mybooks.Title}}</li></p>
+      </div>
+    </div>
+    <div class="book-contain" id="bcon">
+      <div class="book">
+        <div class="top">
+          <div class="top-left">
+            <img src="{{ mybooks.Book_Art.url }}">
+          </div>
+          <div class="top-right">
+            <br>
+            <h3>Description: </h3>
+            <br> <article class="Description">
+              {{ mybooks.Description }}
+            </article>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="b-left">
+            <div class="b-content-1"><p> Reference No <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> Title <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> Author <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> Type <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> Publisher <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> Year Of Publication <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> No Of Copies <span class="dot"> : </span> </p></div>
+            <div class="b-content-1"><p> Date Added <span class="dot"> : </span> </p></div>
+          </div>
+          <div class="b-right">
+            <div class="b-content-2"> <span class="content">{{ mybooks.id }}</span> </div>
+            <div class="b-content-2"> <span class="content">{{ mybooks.Title }}</span></div>
+            <div class="b-content-2"><span class="content">{{ mybooks.Author }}</span></div>
+            <div class="b-content-2"><span class="content">{{ mybooks.Type }}</span></div>
+            <div class="b-content-2"><span class="content">{{ mybooks.Publisher }}</span></div>
+            <div class="b-content-2"><span class="content">{{ mybooks.Year_Of_Publication }}</span></div>
+            <div class="b-content-2"><span class="content">{{ mybooks.No_Of_Copies }}</span></div>
+            <div class="b-content-2"><span class="content">{{ mybooks.Date_Added }}</span></div>
+          </div>
+        </div>
+        <div class="message">
+          <p>Please Note That Once You Delete The Book From The System You Cannot Recover It!</p>
+        </div>
+
+        <a href="{% url 'delete_book' mybooks.id %}"> <button type="button" class="delete">Delete This Book</button> </a>
+        <a href="{% url 'update_book' mybooks.id %}"> <button type="button" class="update">update This Book</button> </a>
+
+      </div>
+    </div>
+{% endblock %}

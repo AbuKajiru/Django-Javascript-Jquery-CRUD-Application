@@ -1,0 +1,16 @@
+
+    {% for field in form %}
+        <!-- Alert Section -->
+        <div class="alert">
+            {{ field.errors }}
+        </div>
+
+        <!-- Label Text -->
+        <label> {{ field.label_tag }} </label>
+
+        <!-- Input Area -->
+        <div class="inp-1" id="inp">
+          {{ field}}
+        </div>
+
+    {% endfor %}
