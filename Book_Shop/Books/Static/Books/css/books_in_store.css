@@ -1,0 +1,156 @@
+header{
+  margin-bottom: 3rem;
+}
+
+.back-container{
+  width: 70%;
+  height: 4rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.back-container button{
+  height: 90%;
+  width: 7rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5rem;
+  float: left;
+}
+
+.back-container button:hover{
+  background-color: #16a085;
+}
+
+.content-details{
+  float: right;
+  height: 90%;
+  width: auto;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #1abc9c;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 5rem;
+}
+
+.book-holder{
+  width: 100%;
+  height: auto;
+  margin: 2rem 0 2rem 0;
+  box-sizing: border-box;
+}
+
+.book-overview{
+  height: 20rem;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 11px 15px 29px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 11px 15px 29px -14px rgba(0,0,0,0.75);
+  box-shadow: 11px 15px 29px -14px rgba(0,0,0,0.75);
+  animation: in 1400ms ease-in-out forwards;
+  transform-origin: top left;
+  background-color: white;
+  box-sizing: border-box;
+
+}
+
+.left{
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+}
+
+.left img{
+  height: 100%;
+  width: 100%;
+}
+
+.center{
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.center-1a, .center-2a, .center-3a, .center-4a{
+  width: 100%;
+  height: 25%;
+  padding: 0.5rem 0 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.center-1a,.center-4a{
+  padding-top: 2rem
+}
+
+.center-1b, .center-2b, .center-3b, .center-4b{
+  width: 100%;
+  height: 25%;
+  padding: 0.5rem 0 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.center-4a, .center-4b{
+  border-bottom: none;
+}
+
+.content{
+  width: 20%;
+  height: auto;
+  color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  border: none;
+  font-family: 'Krub', sans-serif;
+  background-color: #57606f/*#bdc3c7*/;
+  box-sizing: border-box;
+}
+
+.center-right{
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+
+.right{
+  float: right;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+}
+
+.describe{
+  width: 70%;
+  height: auto;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Krub', sans-serif;
+  background-color: #9b59b6;
+  cursor: pointer;
+  margin: 60% 0 0 0;
+  border: none;
+  border-radius: 5rem;
+}
+
+.describe:hover{
+  background-color: #8e44ad;
+}

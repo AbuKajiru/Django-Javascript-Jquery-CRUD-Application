@@ -1,0 +1,168 @@
+
+.prompt{
+  margin: 0 auto;
+  height: 5rem;
+  background-color: #dfe4ea;
+  width: 70%;
+  color: #57606f;
+  text-align: center;
+  border-radius: 5rem;
+  padding: 1.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+
+.prompt-container, .choice-container{
+  width: 100%;
+  margin: 0 0 5rem 0;
+}
+
+.choice{
+  height: 7rem;
+  width: 70%;
+  margin: 0 auto;
+  border: none;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  background-color: #4bcffa;
+  -webkit-box-shadow: 11px 15px 29px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 11px 15px 29px -14px rgba(0,0,0,0.75);
+  box-shadow: 11px 15px 29px -14px rgba(0,0,0,0.75);
+  box-sizing: border-box;
+}
+
+.choice-container:last-child{
+  margin-bottom: 0;
+}
+
+.choice-right{
+  float: right;
+  width: 29%;
+  height: 100%;
+  padding: 2rem 2rem 2rem 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.choice-left{
+  float: left;
+  width: 70%;
+  height: 100%;
+  padding: 2.5rem 1rem 1rem 1rem;
+  font-size: 1.5rem;
+  font-family: cursive;
+  color: white;
+  font-weight: bold;
+  border-right: 1px solid #0fbcf9;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.choice-right button{
+  width: 6rem;
+  color: white;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.view{
+  background-color: #1e90ff;
+}
+
+.view:hover{
+  background-color: #70a1ff;
+}
+
+.add{
+  background-color: #2ed573;
+}
+
+.add:hover{
+  background-color: #2ecc71;
+}
+
+/* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-body{
+  margin:  1rem 0 0 0;
+}
+/* Modal Header */
+.modal-header {
+    padding: 16px;
+    background-color: #1abc9c;
+    color: white;
+    text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+   background-color: #fefefe;
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 0;
+   border: 1px solid #888;
+   width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+   color: white;
+   cursor: pointer;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.view-con, .view-add{
+  width: 90%;
+  height: auto;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Krub', sans-serif;
+  display: none;
+}
+
+.view-con button, .view-add button{
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 4rem;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  font-family: 'Krub', sans-serif;
+  cursor: pointer;
+}
+
+.view-con button:hover, .view-add button:hover{
+  background-color: #2980b9;
+}
